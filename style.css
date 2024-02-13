@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#reportForm {
+  display: block;
+}
+
+#report-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.template-block {
+  height: 1025px;
+}
+
+.template-heading {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  text-align: center;
+  padding: 76px 0 80px 0;
+}
+
+.template-center {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.student,
+.group,
+.general {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-family: 'Times New Roman';
+  font-size: 18px;
+}
+
+.template-about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 26px;
+}
+
+.general {
+  padding-bottom: 130px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Times New Roman';
+  font-size: 18px;
+}
+
+#toggleButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 120px;
+  height: 30px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggleButton:hover {
+  background-color: darkgray;
+}
+
+#saveButton {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+#saveButton:hover {
+  color: blueviolet;
+}
+
+.style-for-all {
+  font-weight: 400;
+  font-family: 'Times New Roman';
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.template-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.width-for-block {
+  display: flex;
+  flex-direction: column;
+  height: 925px;
+}
+
+.style-for-heading {
+  font-weight: 600;
+  font-family: 'Times New Roman';
+  font-size: 18px;
+}
+
+#tzInput {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+}
+
+.style-for-ol {
+  padding-left: 20px;
+}

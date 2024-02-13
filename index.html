@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <title>Генератор отчета</title>
+</head>
+
+<body>
+    <div id="seeButton">
+        <button id="toggleButton" onclick="toggleForm()">Скрыть поля</button>
+    </div>
+
+    <form id="reportForm">
+        <label for="titleTemplate">Выберите шаблон титульного листа:</label>
+        <select id="titleTemplate">
+            <option value="template1">Лабораторная</option>
+            <option value="template2">Курсовая</option>
+            <option value="template3">Практика</option>
+        </select><br>
+
+        <div id="template1" class="template" style="display: none;">
+            <div class="template-block">
+                <div class="template-heading">
+                    <h1 class="style-for-heading">
+                        МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ<br>
+                        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ<br>
+                        ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ<br>
+                        «ЛИПЕЦКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ<br>
+                        УНИВЕРСИТЕТ»
+                    </h1>
+                    <p class="style-for-all">Институт компьютерных наук</p>
+                    <p class="style-for-all">Кафедра автоматизированных систем управления</p>
+                </div>
+                <div class="template-center">
+                    <h1 class="style-for-all">Лабораторная работа</h1>
+                    <p class="style-for-all">по "Архитектуре программных систем"</p>
+                    <p class="style-for-all">Паттерны</p>
+                </div>
+                <div class="template-about">
+                    <div class="student">
+                        <p>Студент</p>
+                        <p>Медведев С.П.</p>
+                    </div>
+                    <div class="group">
+                        <p>Группа</p>
+                        <p>ПИ-20-2</p>
+                    </div>
+                    <div class="general">
+                        <p>Руководитель</p>
+                        <p>Алексеев В.А.</p>
+                    </div>
+                </div>
+                <h2>Липецк 2024г.</h2>
+            </div>
+        </div>
+
+        <div id="template2" class="template" style="display: none;">
+            <div class="template-block">
+                <div class="template-heading">
+                    <h1 class="style-for-heading">
+                        МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ<br>
+                        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ<br>
+                        ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ<br>
+                        «ЛИПЕЦКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ<br>
+                        УНИВЕРСИТЕТ»
+                    </h1>
+                    <p class="style-for-all">Институт компьютерных наук</p>
+                    <p class="style-for-all">Кафедра автоматизированных систем управления</p>
+                </div>
+                <div class="template-center">
+                    <h1 class="style-for-all">Курсовая работа</h1>
+                    <p class="style-for-all">по "Архитектуре программных систем"</p>
+                </div>
+                <div class="template-about">
+                    <div class="student">
+                        <p>Студент</p>
+                        <p>Медведев С.П.</p>
+                    </div>
+                    <div class="group">
+                        <p>Группа</p>
+                        <p>ПИ-20-2</p>
+                    </div>
+                    <div class="general">
+                        <p>Руководитель</p>
+                        <p>Алексеев В.А.</p>
+                    </div>
+                </div>
+                <h2>Липецк 2024г.</h2>
+            </div>
+        </div>
+
+        <div id="template3" class="template" style="display: none;">
+            <div class="template-block">
+                <div class="template-heading">
+                    <h1 class="style-for-heading">
+                        МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ<br>
+                        ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ<br>
+                        ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ<br>
+                        «ЛИПЕЦКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ<br>
+                        УНИВЕРСИТЕТ»
+                    </h1>
+                    <p class="style-for-all">Институт компьютерных наук</p>
+                    <p class="style-for-all">Кафедра автоматизированных систем управления</p>
+                </div>
+                <div class="template-center">
+                    <h1 class="style-for-all">ОТЧЕТ</h1>
+                    <p class="style-for-all">о производственной практике</p>
+                    <p class="style-for-all">"Проектно-технологическая практика"</p>
+                </div>
+                <div class="template-about">
+                    <div class="student">
+                        <p>Студент</p>
+                        <p>Медведев С.П.</p>
+                    </div>
+                    <div class="group">
+                        <p>Группа</p>
+                        <p>ПИ-20-2</p>
+                    </div>
+                    <div class="general">
+                        <p>Руководитель</p>
+                        <p>Алексеев В.А.</p>
+                    </div>
+                </div>
+                <h2>Липецк 2024г.</h2>
+            </div>
+        </div>
+
+        <label for="tzInput">Задание кафедры:</label><br>
+        <textarea type="text" id="tzInput" name="tzInput" rows="4" cols="50"></textarea><br>
+
+        <label for="annotationInput">Аннотация:</label><br>
+        <textarea type="text" id="annotationInput" name="annotationInput" rows="4" cols="50"></textarea><br>
+
+        <label for="tableOfContentsInput">Оглавление:</label><br>
+        <textarea id="tableOfContentsInput" name="tableOfContentsInput" rows="4" cols="50"></textarea><br>
+
+        <label for="contentInput">Основная часть:</label><br>
+        <textarea id="contentInput" name="contentInput" rows="4" cols="50"></textarea><br>
+
+        <label for="referencesInput">Список источников:</label><br>
+        <textarea id="referencesInput" name="referencesInput" rows="4" cols="50"></textarea><br>
+
+        <label for="appInput">Приложение:</label><br>
+        <textarea id="appInput" name="appInput" rows="4" cols="50"></textarea><br>
+
+        <button type="button" onclick="generateReport()">Сформировать отчет</button>
+
+        <a id="saveButton" download="report.html">Сохранить отчет</a>
+    </form>
+
+    <div id="report-block">
+        <div id="report"></div>
+    </div>
+</body>
+
+</html>
